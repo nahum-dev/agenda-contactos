@@ -7,10 +7,20 @@ import ListaContactos from './components/ListaContactos'
 
 function App() {
   const[contactos, setContactos] = useState(contactosIniciales);
+
+  // Funcion para eliminar contacto
+  function eliminarContacto(id){
+    const nuevaLista = contactos.filter(
+      (contacto) => contacto.id !== id
+    );
+    setContactos(nuevaLista);
+  }
+
   return (
     <div>
       <h1>Agenda de Contactos</h1>
-      <ListaContactos contactos={contactos} />
+      <ListaContactos contactos={contactos}
+      eliminarContacto={eliminarContacto} />
     </div>
   )
 }
