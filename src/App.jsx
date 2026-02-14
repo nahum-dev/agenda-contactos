@@ -29,15 +29,17 @@ function App() {
     });
     setContactos(contactosActualizados);
   }
+
+  // Ordenar contactos por favorito
   const contactosOrdenados = [...contactos].sort((a, b) => {
-    return b.favorito - a.favorito;
+    return Number(b.favorito) - Number(a.favorito);
   });
 
   return (
     <div>
       <h1>Agenda de Contactos</h1>
       <ListaContactos 
-        contactos={contactos}
+        contactos={contactosOrdenados}
         eliminarContacto={eliminarContacto}
         alternarFavorito={alternarFavorito}
       />
