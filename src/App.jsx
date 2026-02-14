@@ -16,11 +16,31 @@ function App() {
     setContactos(nuevaLista);
   }
 
+  // Funcion para alternar favorito
+  function alternarFavorito(id){
+    const contactosActualizados = contactos.map((contacto) => {
+      if (contacto.id === id){
+        return {
+          ...contacto,
+          favorito: !contacto.favorito
+        };
+      }
+      return contacto;
+    });
+    setContactos(contactosActualizados);
+  }
+  const contactosOrdenados = [...contactos].sort((a, b) => {
+    return b.favorito - a.favorito;
+  });
+
   return (
     <div>
       <h1>Agenda de Contactos</h1>
-      <ListaContactos contactos={contactos}
-      eliminarContacto={eliminarContacto} />
+      <ListaContactos 
+        contactos={contactos}
+        eliminarContacto={eliminarContacto}
+        alternarFavorito={alternarFavorito}
+      />
     </div>
   )
 }

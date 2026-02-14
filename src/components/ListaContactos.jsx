@@ -1,6 +1,6 @@
 import Contacto from "./Contacto";
 
-function ListaContactos({contactos, eliminarContacto}) {
+function ListaContactos({contactos, eliminarContacto, alternarFavorito}) {
     return(
         <div>
             <h2>Lista de Contactos</h2>
@@ -9,7 +9,8 @@ function ListaContactos({contactos, eliminarContacto}) {
                 <Contacto 
                     key={contacto.id} 
                     contacto={contacto} 
-                    eliminarContacto={eliminarContacto} 
+                    eliminarContacto={eliminarContacto}
+                    alternarFavorito={alternarFavorito}
                 />
             ))}
         </div>
