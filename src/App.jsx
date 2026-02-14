@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import contactosIniciales from "./data/contactos.json"
 import ListaContactos from './components/ListaContactos'
+import FormularioContacto from './components/FormularioContacto'
 
 function App() {
   const[contactos, setContactos] = useState(contactosIniciales);
@@ -38,6 +39,9 @@ function App() {
   return (
     <div>
       <h1>Agenda de Contactos</h1>
+      
+      <FormularioContact/>
+      
       <ListaContactos 
         contactos={contactosOrdenados}
         eliminarContacto={eliminarContacto}
