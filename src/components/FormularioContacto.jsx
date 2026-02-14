@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./FormularioContacto.css";
 
 function FormularioContacto({agregarContacto}){
     const [nombre, setNombre] = useState("");
@@ -26,7 +27,7 @@ function FormularioContacto({agregarContacto}){
 
 
     return(
-        <form onSubmit={manejarEnvio}>
+        <form onSubmit={manejarEnvio} className="formulario-container">
             <h2>Agregar Contacto</h2>
             <input
                 type="text"

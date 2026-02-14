@@ -42,17 +42,21 @@ function App() {
   }
 
   return (
-    <div>
-      <h1>Agenda de Contactos</h1>
-      
-      <FormularioContacto agregarContacto={agregarContacto}/>
-      
+    <div className="main-container">
+    <h1>Agenda de Contactos</h1>
+
+    <div className="card">
+      <FormularioContacto agregarContacto={agregarContacto} />
+    </div>
+
+    <div className="card">
       <ListaContactos 
         contactos={contactosOrdenados}
         eliminarContacto={eliminarContacto}
         alternarFavorito={alternarFavorito}
       />
     </div>
+  </div>
   )
 }
 
