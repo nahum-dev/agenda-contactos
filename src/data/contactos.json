@@ -1,0 +1,31 @@
+[
+    {
+        "id": 1,
+        "nombre": "Nahum",
+        "apellido": "Flores",
+        "telefono": "69850562",
+        "favorito": true
+    },
+    {
+        "id":2,
+        "nombre":"Erika",
+        "apellido":"García",
+        "telefono":"69850563",
+        "favorito": false
+    },
+    {
+        "id":3,
+        "nombre":"Anderson",
+        "apellido":"Portillo",
+        "telefono":"69850564",
+        "favorito": true
+    },
+    {
+        "id":4,
+        "nombre":"Ana",
+        "apellido":"López",
+        "telefono":"69850565",
+        "favorito": false
+    }
+
+]
