@@ -15,15 +15,15 @@
     },
     {
         "id":3,
-        "nombre":"Anderson",
-        "apellido":"Portillo",
+        "nombre":"Rosa",
+        "apellido":"Flores",
         "telefono":"69850564",
         "favorito": true
     },
     {
         "id":4,
-        "nombre":"Ana",
-        "apellido":"López",
+        "nombre":"Emily",
+        "apellido":"Escobar",
         "telefono":"69850565",
         "favorito": false
     }
