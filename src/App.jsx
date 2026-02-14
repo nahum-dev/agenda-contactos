@@ -36,11 +36,16 @@ function App() {
     return Number(b.favorito) - Number(a.favorito);
   });
 
+  // Funcion para agregar nuevo contacto
+  function agregarContacto(nuevoContacto){
+    setContactos([...contactos, nuevoContacto]);
+  }
+
   return (
     <div>
       <h1>Agenda de Contactos</h1>
       
-      <FormularioContact/>
+      <FormularioContacto agregarContacto={agregarContacto}/>
       
       <ListaContactos 
         contactos={contactosOrdenados}

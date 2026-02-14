@@ -1,15 +1,29 @@
 import { useState } from "react";
 
-function FormularioContacto(){
+function FormularioContacto({agregarContacto}){
     const [nombre, setNombre] = useState("");
     const [apellido, setApellido] = useState("");
     const [telefono, setTelefono] = useState("");
 
-    function manejarEnvio(e){
+    // Funcion para manejar el envio del formulario
+    function manejarEnvio(e) {
         e.preventDefault();
 
-        console.log(nombre, apellido, telefono);
+        const nuevoContacto = {
+            id: Date.now(),
+            nombre,
+            apellido,
+            telefono,
+            favorito: false
+        };
+
+        agregarContacto(nuevoContacto);
+
+        setNombre("");
+        setApellido("");
+        setTelefono("");
     }
+
 
     return(
         <form onSubmit={manejarEnvio}>
